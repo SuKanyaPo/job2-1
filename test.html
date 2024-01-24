@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculate</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .left-container {
+            margin-right: 20px;
+        }
+
+        .input-container {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .input-container label {
+            margin-right: 10px;
+        }
+
+        button {
+            align-self: flex-start;
+        }
+
+        .result-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- เพิ่มภาพ 1.png -->
+    <div class="left-container">
+        <img src="/Users/s-trecmacair4/Desktop/test/2.png" alt="ภาพ 1" width="800" height="900">
+    </div>
+
+    <!-- ขวา -->
+    <div>
+        <h1>คำนวณ</h1> 
+        
+        <div class="input-container">
+            <label for="inputValue4">Xa:</label>
+            <input type="text" id="inputValue4" name="inputValue4"> **ถ้ามีก็ใส่
+        </div>
+        <div class="input-container">
+            <label for="inputValue2">Xb:</label>
+            <input type="text" id="inputValue2" name="inputValue2">
+        </div>
+    
+        <div class="input-container">
+            <label for="inputValue3">(Va)x</label>
+            <input type="text" id="inputValue3" name="inputValue3">
+        </div>
+
+        <button onclick="showInputValues()">แสดงข้อความ</button>
+        <div class="result-container">
+            <p id="result1">ผลลัพธ์ t: </p>
+        </div>
+
+        <div class="input-container">
+            <label for="inputValue6">yA:</label>
+            <input type="text" id="inputValue6" name="inputValue6">***ถ้ามีก็ใส่
+        </div>
+    
+        <div class="input-container">
+            <label for="inputValue7">yB:</label>
+            <input type="text" id="inputValue7" name="inputValue7">
+        </div>
+
+        <div class="input-container">
+            <label for="inputValue8">(Va)y:</label>
+            <input type="text" id="inputValue8" name="inputValue8">
+        </div>
+    
+        <div class="input-container">
+            <label for="inputValue9">ay:</label>
+            <input type="text" id="inputValue9" name="inputValue9">
+        </div>
+
+        <button onclick="showInputValues1()">แสดงข้อความ</button>
+        <button onclick="calculateAndDisplayResult()">คำนวณ VA</button>
+        <button onclick="calculate5() ">คำนวณ t</button>
+
+
+
+        <div class="result-container">
+            <p id="result2">ผลลัพธ์ : </p>
+        </div>
+        <div class="result-container">
+            <p id="result3">ผลลัพธ์ t: </p>
+        </div>
+        <div class="result-container">
+            <p id="result4">ผลลัพธ์ =  </p>
+        </div>
+
+        <script>
+            function showInputValues() {
+                var value2 = document.getElementById("inputValue2").value;
+                var value3 = document.getElementById("inputValue3").value;
+                var value4 = document.getElementById("inputValue4").value;
+
+                if (value2 !== "") {
+                    // If inputValue2 is present, use this formula
+                    document.getElementById("result1").textContent = "ผลลัพธ์ t = " + value2 + " / " + value3;
+                } else if (value4 !== "") {
+                    // If inputValue4 is present and inputValue2 is not, use this formula
+                    document.getElementById("result1").textContent = "ผลลัพธ์ t = " + value4 + " + " + value3;
+                }
+            }
+        </script>
+
+        <script>
+            function showInputValues1() {
+                var value6 = document.getElementById("inputValue6").value;
+                var value7 = document.getElementById("inputValue7").value;
+                var value8 = document.getElementById("inputValue8").value;
+                var value9 = document.getElementById("inputValue9").value;
+
+                if (!isNaN(value6 !== "")) {
+                    // If inputValue6 is present, use this formula
+                    var formulaResult = 1 / 2 * value9;
+                    // Use Math.abs() to remove the negative sign
+                    var absFormulaResult = Math.abs(formulaResult);
+                    var absValue7 = Math.abs(value7);
+                    document.getElementById("result2").textContent = "ผลลัพธ์ คือ: " + absFormulaResult + " t*2 - " + value8 + " t = " + absValue7;
+                } else if (value7 !== "") {
+                    var formulaResult = 1 / 2 * value9;
+                    // Use Math.abs() to remove the negative sign
+                    var absFormulaResult = Math.abs(formulaResult);
+                    var absValue6 = Math.abs(value6);
+                    document.getElementById("result2").textContent = "ผลลัพธ์ คือ: " + absFormulaResult + " t*2 - " + absValue6 + " t   " + value8;
+                }
+            }
+
+            
+        function calculateAndDisplayResult() {
+            // Assuming you have the following variables with numeric values
+            var value2 = document.getElementById("inputValue2").value;
+            var value3 = document.getElementById("inputValue3").value;
+            var value7 = document.getElementById("inputValue7").value;
+            var value8 = document.getElementById("inputValue8").value;
+            var value9 = document.getElementById("inputValue9").value;
+                    
+                    var absFormulaResult = 1 / 2 * value9;
+                    var result = 149153 / (17800 * Math.sin(25 * Math.PI / 180));
+                        console.log("Result:", result);
+
+                        document.getElementById('result3').textContent = "ผลลัพธ์ = " + result.toFixed(2);
+                    }
+                    function calculate5() {
+                        var value2 = parseFloat(document.getElementById("inputValue2").value);
+                        var result3Value = parseFloat(document.getElementById('result3').textContent.split("=")[1]) || 0;
+                        
+
+                        if (angleInRadians !== ""){
+                        var angleInRadians = (25 * Math.PI) / 180;
+                        // Calculate the combined result
+                        var combinedResult = value2 / (result3Value * Math.cos(angleInRadians));
+
+                        // Display the result in the HTML element with id "result4"
+                        document.getElementById("result4").textContent = "ผลลัพธ์ : " + combinedResult.toFixed(2);
+                        }
+                    }
+
+
+        </script>
+    </div>
+</body>
+</html>

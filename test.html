@@ -135,7 +135,6 @@
 
             
 function calculateAndDisplayResult() {
-    // Assuming you have the following variables with numeric values
     var value2 = document.getElementById("inputValue2").value;
     var value3 = document.getElementById("inputValue3").value;
     var value7 = document.getElementById("inputValue7").value;
@@ -143,41 +142,74 @@ function calculateAndDisplayResult() {
     var value9 = document.getElementById("inputValue9").value;
     var resultElement = parseFloat(document.getElementById('result1').innerText.split(":")[1]) || 0;
 
-
     var formulaResult = 1 / 2 * value9;
     var absFormulaResult = Math.abs(formulaResult);
     var absValue7 = Math.abs(value7);
     
     var resultElement3 = document.getElementById("result3");
 
-
+    if (value7 == "64") {
     resultElement3.innerHTML = " ผลลัพท์ " + absFormulaResult + " " + resultElement + "*2" + "=" + value8 + "*" + resultElement + "+" + absValue7;
     resultElement3.innerHTML += "<br><center>" + "80/Vacos25" + "*2" + "=" + "20.65";
     resultElement3.innerHTML += "<br> <center>" + "80/Vacos25" + "=" + "4.545";
     resultElement3.innerHTML += "<br><center>"+ "Va = " + 149153 / (17800 * Math.sin(25 * Math.PI / 180));
-    
-    console.log("Result:", result);
+    console.log("Result:", absFormulaResult);
+} else if (value7 == "89") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 49153 / (18180 * Math.sin(25 * Math.PI / 180));
+} else if (value7 == "65") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 145153 / (18180 * Math.sin(25 * Math.PI / 180));
+} else if (value7 == "66") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 47051 / (6060 * Math.sin(25 * Math.PI / 180));
+} else if (value7 == "67") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 137153 / (18180 * Math.sin(25 * Math.PI / 180));
+} else if (value7 == "68") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 133153 / (18180 * Math.sin(25 * Math.PI / 180));
 }
+else if (value7 == "69") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 43051 / (6060 * Math.sin(25 * Math.PI / 180));
+}
+else if (value7 == "70") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 125153 / (18180 * Math.sin(25 * Math.PI / 180));
+}
+else if (value7 == "71") {
+    resultElement3.innerHTML = "<br><center>"+ "Va = " + 121153 / (18180 * Math.sin(25 * Math.PI / 180));
+}
+}
+ function calculate5(){
+ var resultElement3 = document.getElementById("result3");
+ var value7 = document.getElementById("inputValue7").value;
 
-                    
-
-
-
-
-                    function calculate5() {
-                        var value2 = parseFloat(document.getElementById("inputValue2").value);
-                        var result3Value = parseFloat(document.getElementById('result3').textContent.split("=")[1]) || 0;
-                        
-                    
-                        var combinedResult = 4.545;
-
-                        // Display the result in the HTML element with id "result4"
-                        document.getElementById("result4").textContent = "ผลลัพธ์ t : " + combinedResult;
-                        
-                                            
-                    }
+ var resultElement4 = document.getElementById("result4");
 
 
+
+ if (value7 == "64") {
+    resultElement4.innerHTML = " ผลลัพท์ " + absFormulaResult + " " + resultElement + "*2" + "=" + value8 + "*" + resultElement + "+" + absValue7;
+    resultElement4.innerHTML += "<br><center>" + "80/Vacos25" + "*2" + "=" + "20.65";
+        resultElement4.innerHTML += "<br> <center>" + "80/Vacos25" + "=" + "4.545";
+            resultElement4.innerHTML += "<br><center>"+ "Va = " + 8000 / (1941 * Math.cos(25 * Math.PI / 180));
+    console.log("Result:", absFormulaResult);
+} else if (value7 == "89") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 2000 / (159 * Math.cos(25 * Math.PI / 180));
+} else if (value7 == "65") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 8000 / (1889 * Math.cos(25 * Math.PI / 180));
+} else if (value7 == "66") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 8000 / (1837 * Math.cos(25 * Math.PI / 180));
+} else if (value7 == "67") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 8000 / (1783 * Math.cos(25 * Math.PI / 180));
+} else if (value7 == "68") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 8000 / (1733 * Math.cos(25 * Math.PI / 180));
+}
+else if (value7 == "69") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 100 / (21 * Math.cos(25 * Math.PI / 180));
+}
+else if (value7 == "70") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 2000 / (407 * Math.cos(25 * Math.PI / 180));
+}
+else if (value7 == "71") {
+    resultElement4.innerHTML = "<br><center>"+ "Va = " + 1000 / (197 * Math.cos(25 * Math.PI / 180));
+}
+}
         </script>
     </div>
 </body>
